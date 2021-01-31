@@ -1,0 +1,7 @@
+<launch>
+
+    <node name="talker" pkg="beginner_tutorials" type="talker" output="screen">
+        <param name="min_score_local" value="0.22" />
+        <param name="min_score_global" value="0.33" />
+    </node>
+</launch>

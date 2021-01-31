@@ -1,0 +1,7 @@
+<launch>
+
+    <node name="listener" pkg="beginner_tutorials" type="listener" output="screen">
+        <param name="min_score_local" type="double" value="0.25" />
+        <param name="min_score_global" type="double" value="0.33" />
+    </node>
+</launch>

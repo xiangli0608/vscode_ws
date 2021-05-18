@@ -44,7 +44,7 @@ int main(int argc, char **argv)
    * than we can send them, the number here specifies how many messages to
    * buffer up before throwing some away.
    */
-  ros::Publisher chatter_pub = n.advertise<std_msgs::String>("chatter", 1, true);
+  ros::Publisher chatter_pub = n.advertise<std_msgs::String>("chatter", 1000);
 
   ros::Rate loop_rate(10);
 
@@ -53,8 +53,8 @@ int main(int argc, char **argv)
    * a unique string for each message.
    */
   int count = 0;
-//   while (ros::ok())
-//   {
+  while (ros::ok())
+  {
     /**
      * This is a message object. You stuff it with data, and then publish it.
      */
@@ -74,12 +74,12 @@ int main(int argc, char **argv)
      */
     chatter_pub.publish(msg);
 
-    // ros::spinOnce();
+    ros::spinOnce();
 
     loop_rate.sleep();
     ++count;
-//   }
-    ros::spin();
+  }
+
 
   return 0;
 }

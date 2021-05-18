@@ -102,6 +102,12 @@
         "polytope": "cpp",
         "slist": "cpp",
         "numericaldiff": "cpp",
-        "random": "cpp"
-    }
+        "random": "cpp",
+        "optional": "cpp"
+    },
+    "python.analysis.extraPaths": [
+      "/home/lx/cartographer_ws/install_isolated/lib/python2.7/dist-packages",
+      "/home/lx/catkin_ws/devel/lib/python2.7/dist-packages",
+      "/opt/ros/kinetic/lib/python2.7/dist-packages"
+    ]
 }

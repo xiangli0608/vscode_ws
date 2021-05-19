@@ -256,6 +256,7 @@ void test_imu_tracker()
   // 根据线性加速度进行重力的校准
   Eigen::Vector3d imu_linear_acceleration(0, 0, 9.8);
   const double alpha = 0.5;
+  // 需要验证结果,就把下面这句话注释掉
   gravity_vector_ = (1. - alpha) * gravity_vector_ + alpha * imu_linear_acceleration;
   cout << "gravity_ new x y z = " << gravity_vector_.transpose() << endl;
 

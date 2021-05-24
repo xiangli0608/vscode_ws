@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!-- change the name of the urdf file to show different robot in RViz -->
+<launch>
+
+        <param name="robot_description" textfile="$(find scout_description)/urdf/nucros_scout.urdf" />
+	<!-- <param name="use_gui" value="true"/> -->
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+	<!-- launch robot state publisher -->
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher">
+		<param name="publisher_frequency" type="double" value="100.0"/>
+	</node>
+
+</launch>
